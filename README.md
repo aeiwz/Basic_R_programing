@@ -47,6 +47,7 @@ In summary, R is a powerful and versatile language for data analysis and statist
 ## Rstudio
 ### Download and install R and Rstudio
 Download R and Rstudio: https://posit.co/download/rstudio-desktop/
+
 Install R and Rstudio
 
 ---
