@@ -1,5 +1,64 @@
 # Basic R programing
 
+## Data type
+
+1. **Numeric (Double)**:
+   - Numeric data types represent real numbers, including integers and floating-point numbers.
+   - Example: `x <- 42.5`
+
+2. **Integer**:
+   - Integers are whole numbers without a decimal point.
+   - Example: `y <- 10L` (L is used to indicate it's an integer)
+
+3. **Character (String)**:
+   - Character data types represent text or strings.
+   - Example: `name <- "Alice"`
+
+4. **Logical (Boolean)**:
+   - Logical data types represent binary values, either `TRUE` or `FALSE`.
+   - Example: `is_valid <- TRUE`
+
+5. **Factor**:
+   - Factors are used to represent categorical data. They can have predefined levels.
+   - Example: `gender <- factor(c("Male", "Female", "Male"))`
+
+6. **Date and Time**:
+   - R provides various data types for date and time, including `Date`, `POSIXct`, and `POSIXlt`.
+   - Example: `birth_date <- as.Date("1990-05-15")`
+
+7. **Complex**:
+   - Complex data types represent complex numbers with both real and imaginary parts.
+   - Example: `z <- 3 + 2i`
+
+8. **List**:
+   - Lists are versatile data structures that can hold elements of different types, including other lists.
+   - Example: `my_list <- list(name = "John", age = 25, scores = c(90, 85, 78))`
+
+9. **Vector**:
+   - Vectors are one-dimensional arrays that can contain elements of the same data type.
+   - Example: `numeric_vector <- c(1, 2, 3, 4, 5)`
+
+10. **Matrix**:
+    - Matrices are two-dimensional arrays with rows and columns.
+    - Example: `my_matrix <- matrix(1:9, nrow = 3, ncol = 3)`
+
+11. **Data Frame**:
+    - Data frames are two-dimensional data structures that resemble tables in a database, and they can hold different data types.
+    - Example: `my_df <- data.frame(Name = c("Alice", "Bob"), Age = c(30, 25))`
+
+12. **Array**:
+    - Arrays are multi-dimensional data structures that can hold elements of the same data type.
+    - Example: `my_array <- array(1:12, dim = c(3, 2, 2))`
+
+13. **Function**:
+    - Functions are objects that can be assigned to variables and called like regular functions.
+    - Example: `square <- function(x) x^2`
+
+14. **Environment**:
+    - Environments are used to store variables and their values.
+    - Example: `my_env <- new.env()`
+
+
 ## Basic R syntax
 
 1. **Assigning Values**:
