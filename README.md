@@ -278,3 +278,131 @@ Install R and Rstudio
    ```
 ---
 
+## Graph visualisation
+
+```R
+# Sample data for a bar chart
+categories <- c("Category A", "Category B", "Category C", "Category D")
+values <- c(25, 40, 15, 30)
+
+
+# Sample data for a box plot
+group1 <- rnorm(100, mean = 0, sd = 1)
+group2 <- rnorm(100, mean = 2, sd = 1)
+data <- list(Group1 = group1, Group2 = group2)
+
+
+# Sample data for a line plot
+time <- 1:10
+values <- c(3, 5, 7, 4, 8, 9, 6, 10, 12, 11)
+
+
+# Sample data for a scatter plot
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 1, 6, 3)
+
+
+# Sample data for a pie chart
+categories <- c("Category A", "Category B", "Category C")
+values <- c(30, 40, 15)
+
+
+
+# Load the ggplot2 package
+library(ggplot2)
+
+# Sample data for all plots
+# You can replace this with your own data
+set.seed(123)
+# Create a data frame with consistent vector lengths
+data <- data.frame(
+  Category = c("A", "B", "C", "D"),
+  Value = c(25, 40, 15, 30),
+  Group1 = c(rnorm(100, mean = 0, sd = 1)),
+  Group2 = c(rnorm(100, mean = 2, sd = 1)),
+  Time = 1:10,
+  Values = c(3, 5, 7, 4, 8, 9, 6, 10, 12, 11),
+  X = c(1, 2, 3, 4, 5),
+  Y = c(2, 4, 1, 6, 3),
+  Label = c("Category A", "Category B", "Category C", NA, NA),
+  Percentage = c(30, 40, 15, NA, NA)
+)
+
+# Replace NA values or adjust vector lengths as needed
+
+# Create a bar chart using ggplot2
+bar_plot <- ggplot(data, aes(x = Category, y = Value, fill = Category)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Bar Chart Example")
+
+# Create a box plot using ggplot2
+box_plot <- ggplot(data, aes(x = factor(1), y = Group1)) +
+  geom_boxplot() +
+  labs(title = "Box Plot Example")
+
+# Create a line plot using ggplot2
+line_plot <- ggplot(data, aes(x = Time, y = Values)) +
+  geom_line() +
+  labs(title = "Line Plot Example")
+
+# Create a scatter plot using ggplot2
+scatter_plot <- ggplot(data, aes(x = X, y = Y)) +
+  geom_point() +
+  labs(title = "Scatter Plot Example")
+
+# Create pie_chart_data using dplyr
+# Install and load the dplyr package
+# Your code for creating the pie chart
+library(dplyr)
+pie_chart_data <- data %>%
+  group_by(Label) %>%
+  summarise(Percentage = sum(Percentage))
+pie_chart <- ggplot(pie_chart_data, aes(x = "", y = Percentage, fill = Label)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y") +
+  labs(title = "Pie Chart Example") +
+  theme_void()
+
+
+# Display the plots
+print(bar_plot)
+print(box_plot)
+print(line_plot)
+print(scatter_plot)
+print(pie_chart)
+```
+
+---
+
+
+**Assignment: Basic R Syntax**
+
+**Instructions:**
+
+1. **Variables and Data Types**:
+   a. Create three variables: `age`, `name`, and `is_student`. Assign appropriate values to these variables (e.g., your age, your name, and a boolean value indicating whether you are a student).
+   b. Display the values of these variables using the `print()` function.
+
+2. **Basic Operations**:
+   a. Create two variables, `num1` and `num2`, and assign them numeric values of your choice.
+   b. Calculate the sum, difference, product, and quotient of `num1` and `num2`.
+   c. Display the results using the `print()` function.
+
+3. **Data Manipulation**:
+   a. Create a vector `my_vector` containing the numbers from 1 to 10.
+   b. Extract the elements at indices 3, 5, and 8 from `my_vector`.
+   c. Calculate the mean and median of `my_vector`.
+   d. Display the results using the `print()` function.
+
+4. **Conditional Statements**:
+   a. Create a variable `score` and assign it a numeric value between 0 and 100.
+   b. Write an if-else statement to check if the `score` is greater than or equal to 60. If it is, print "Pass," otherwise print "Fail."
+
+5. **Loops**:
+   a. Create a for loop to print the numbers from 1 to 5.
+   b. Create a while loop to print the numbers from 1 to 5.
+
+6. **Functions**:
+   a. Write a function called `square` that takes one argument (a number) and returns its square.
+   b. Use the `square()` function to calculate the square of a number of your choice and print the result.
+
