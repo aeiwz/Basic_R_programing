@@ -44,7 +44,6 @@
 In summary, R is a powerful and versatile language for data analysis and statistical computing. It offers a wide range of tools and libraries, making it a popular choice for data scientists, statisticians, and analysts. To get started with R, you can download it from the official R Project website and explore online tutorials and documentation to build your skills.
 
 ---
----
 
 ## Data type
 
@@ -187,7 +186,6 @@ In summary, R is a powerful and versatile language for data analysis and statist
 10. **Data Import/Export**:
     - Read and write data from/to files like CSV, Excel, or databases using functions like `read.csv()` and `write.csv()`.
 
----
 ---
 
 1. **Data Manipulation**:
