@@ -110,7 +110,6 @@ Install R and Rstudio
     - Environments are used to store variables and their values.
     - Example: `my_env <- new.env()`
 ---
----
 ## Basic R syntax
 
 1. **Assigning Values**:
